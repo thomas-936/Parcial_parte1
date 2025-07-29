@@ -60,5 +60,3 @@ while opcion!=4:
                         f"\tDesempeño en equipo: {empleados[codigo]['evalucion'][codigo_evalucion]['desempeño_equipo']}")
 
 
-
-promedio = (curso["tarea"] + curso["parcial"] + curso["proyecto"]) / 3
