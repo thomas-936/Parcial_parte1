@@ -33,8 +33,10 @@ while opcion!=4:
                     "telefono": input("Ingrese el telefono del empleado: "),
                     "correo": input("Ingrese el correo del empleado")
                   }
-                empleados[codigo]["evaluacion"] = {
 
+                empleados[codigo]["evaluacion"] = {}
+                codigo_proyecto = input("Ingrese el codigo del proyecto: ")
+                empleados[codigo]["evaluacion"][codigo_proyecto] = {
                     "puntualidad": int(input("Ingrese la puntualidad del usuario: ")),
                     "equipo": int(input("Ingrase el nivel de trabajo en equipo del empleado: ")),
                     "observaciones": int(input("Ingrese observaciones del empleado: ")),
@@ -52,7 +54,7 @@ while opcion!=4:
                 print(f"Telefono: {empleados[codigo]['contacto']['telefono']}")
                 print("Evalucion: ")
                 for codigo_proyecto in empleados[codigo]["proyecto"]:
-                    print(f"\tCodigo del proyect: {codigo_proyecto}")
+                    print(f"\tCodigo del proyecto: {codigo_proyecto}")
                     print(f"\tNombre del proyecto: {empleados[codigo]['proyecto'][codigo_proyecto]['nombre_proyecto']} ")
                     print(
                         f"\tDesempeño del proyecto: {empleados[codigo]['proyecto'][codigo_proyecto]['desempeño_proyecto']}")
